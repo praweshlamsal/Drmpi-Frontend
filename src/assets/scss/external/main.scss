@@ -7,7 +7,7 @@
 
 .inner-image
 {
-	background-image: linear-gradient(to right,#323ba8f2,#3b9fecc7), url(../image/b.jpg);
+	// background-image: linear-gradient(to right,#323ba8f2,#3b9fecc7), url(../image/b.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	margin-bottom: 45px;
@@ -558,7 +558,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		padding: 120px 0px;
-		background-image: linear-gradient(to right,#323ba8f2,#3b9fecc7), url(../image/b.jpg);
+		// background-image: linear-gradient(to right,#323ba8f2,#3b9fecc7), url(../image/b.jpg);
 		@include max(991px)
 		{
 			padding: 60px 15px 60px 0px;
@@ -705,7 +705,7 @@
 	{
 		border-radius: 42px;
 		height: 245px;
-		box-shadow: 0px 0px 5px rgb(0 0 0 / 60%);
+		// box-shadow: 0px 0px 5px rgb(0 0 0 / 60%);
 		padding: 30px 30px 45px;
 		margin-bottom: 30px;
 		.main-btn
@@ -1946,7 +1946,7 @@ footer
 		/*	background: #ddd;*/
 		padding: 10px;
 		margin-bottom: 30px;
-		box-shadow: 0px 0px 9px rgb(0 0 0 / 40%);
+		// box-shadow: 0px 0px 9px rgb(0 0 0 / 40%);
 		padding-bottom: 20px;
 		.dw-img
 		{
@@ -2566,7 +2566,7 @@ footer
 	}
 	.side-list-wrapper
 	{
-		box-shadow: 0px 0px 6px rgb(0 0 0 / 40%);
+		// box-shadow: 0px 0px 6px rgb(0 0 0 / 40%);
 		padding: 15px;
 		.img-container
 		{
@@ -2625,7 +2625,7 @@ footer
 		{
 			
 			padding: 30px 30px 20px;
-			box-shadow: 0px 0px 4px rgb(0 0 0 / 40%); 
+			// box-shadow: 0px 0px 4px rgb(0 0 0 / 40%); 
 			margin-bottom: 40px;
 			border: 1px solid #ddd;
 			border-radius: 35px;
