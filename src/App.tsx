@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import SimpleCard from './components/exampleCard';
 
 function App() {
@@ -25,4 +25,3 @@ function App() {
 }
 
 export default App;
- 
