@@ -86,7 +86,9 @@
 		position: relative;
 		top: -24px;
 		img
-		{
+		{	
+			position: relative;
+			top: 10px;
 			margin: 0px auto;
 		}
 	}
@@ -562,11 +564,11 @@
 	margin-bottom: 60px;
 	.back-img
 	{
-		/* background: linear-gradient(rgba(255, 255, 255, 0.9) 100%, rgba(255, 255, 255, 0.9) 100%), */
 		background-size: cover;
+		background: linear-gradient(rgba(255, 255, 255, 0.9) 100%, rgba(255, 255, 255, 0.9) 100%);
 		background-repeat: no-repeat;
 		padding: 120px 0px;
-		// background-image: linear-gradient(to right,#323ba8f2,#3b9fecc7), url(../image/b.jpg);
+		background-image: linear-gradient(to right,#323ba8f2,#3b9fecc7), url(../../images/slider/item1.jpg);
 		@include max(991px)
 		{
 			padding: 60px 15px 60px 0px;
@@ -582,6 +584,7 @@
 	}
 	.abt-img
 	{
+		position: relative;
 		@include max(991px)
 		{
 			margin-top: 70px;
@@ -713,7 +716,7 @@
 	{
 		border-radius: 42px;
 		height: 245px;
-		// box-shadow: 0px 0px 5px rgb(0 0 0 / 60%);
+		box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
 		padding: 30px 30px 45px;
 		margin-bottom: 30px;
 		.main-btn
@@ -1049,6 +1052,7 @@ footer
 	}
 	.foot-col
 	{
+		text-align: left;
 		@include max(991px)
 		{
 			text-align: center;
@@ -1058,8 +1062,13 @@ footer
 		ul
 		{
 			padding: 0px;
+			display: flex;
+			flex-direction: column;
+
 			li
 			{
+				display: flex;
+				align-items: center;
 				list-style: none;
 				margin-bottom: 15px;
 				/*font-weight: 600;*/
@@ -1079,9 +1088,9 @@ footer
 			a
 			{
 				display: flex;
-				i
+				svg
 				{
-					width: 30px;
+					width: 30px !important;
 					height: 30px;
 					background: #fff;
 					color: #000;
@@ -1091,6 +1100,8 @@ footer
 					align-items: center;
 					font-size: 18px;
 					z-index: 999;
+					padding: 7px;
+					
 				}
 				span
 				{

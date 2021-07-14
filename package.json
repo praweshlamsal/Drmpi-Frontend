@@ -17,6 +17,7 @@
     "@types/react": "^16.9.33",
     "@types/react-bootstrap": "^0.32.25",
     "@types/react-dom": "^16.9.6",
+    "@types/react-slick": "^0.23.5",
     "bootstrap": "^5.0.1",
     "node-sass": "4.14.1",
     "react": "^16.13.1",
@@ -30,6 +31,7 @@
     "redux-actions": "^2.6.5",
     "redux-observable": "^1.2.0",
     "redux-thunk": "^2.3.0",
+    "slick-carousel": "^1.8.1",
     "typescript": "^3.7.5"
   },
   "scripts": {
