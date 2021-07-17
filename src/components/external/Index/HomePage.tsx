@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect, ConnectedProps, RootStateOrAny } from 'react-redux';
+import { homepageAction } from '../../../actions/homepage/homepageAction';
+import { RootState } from '../../../store/store';
 import Footer from '../Common/Footer/Footer';
 import Header from '../Common/Header/Header';
 import Aboutus from '../Home/AboutUs/Aboutus';
@@ -6,7 +9,14 @@ import Academic from '../Home/Academic/Academic';
 import Notice from '../Home/Notice/Notice';
 import ShortTerm from '../Home/ShortTerm/ShortTerm';
 import SlickSlider from '../Home/SlickSlider/SlickSlider';
-const HomePage = () => {
+interface IProps extends propsFromRedux {
+
+}
+const HomePage = (props: IProps) => {
+    console.log(props.confirmbase, "helloasdas")
+    useEffect(() => {
+        props.homepageAction()
+    }, [])
     return (
         <>
             <Header />
@@ -20,4 +30,13 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+const mapStateToProps = (state: RootState) => ({
+    confirmbase: state.basicState,
+})
+const mapDispatchToProps = {
+    homepageAction: homepageAction
+}
+
+const connector = connect(mapStateToProps, mapDispatchToProps)
+type propsFromRedux = ConnectedProps<typeof connector>
+export default connector(HomePage)
