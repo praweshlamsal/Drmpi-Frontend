@@ -6,6 +6,7 @@ interface IProps {
     title: string;
     description: string;
     right: boolean;
+    url: string
 }
 const AcademicCommon = (props: IProps) => {
     const { icon, title, description, right } = props
@@ -20,7 +21,7 @@ const AcademicCommon = (props: IProps) => {
                                     <h4>{title}</h4>
                                     <p>{description}</p>
                                     <div className="main-btn left-btn">
-                                        <a href="#">View More</a>
+                                        <a href={props.url}>View More</a>
                                     </div>
                                 </div>
                             </div>

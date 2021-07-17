@@ -13,9 +13,10 @@ interface IProps extends propsFromRedux {
 
 }
 const HomePage = (props: IProps) => {
+    const { sliderProps, academicProps, aboutUsProps } = props
     useEffect(() => {
-        if (props.sliderProps?.length) {
-
+        debugger;
+        if (props.sliderProps?.length && props.academicProps?.Cards?.length) {
         }
         else {
             let data = props.homepageAction();
@@ -27,15 +28,15 @@ const HomePage = (props: IProps) => {
             })
         }
 
-    }, [props.homepageAction, props.sliderProps])
+    }, [props.homepageAction, props.homepage])
 
 
     return (
         <>
             <Header />
-            <SlickSlider sliderProps={props.sliderProps} />
-            <Academic />
-            <Aboutus />
+            <SlickSlider sliderProps={sliderProps} />
+            <Academic academicProps={academicProps!} />
+            <Aboutus aboutUsProps={aboutUsProps!} />
             <Notice />
             <ShortTerm />
             <Footer />
@@ -44,7 +45,10 @@ const HomePage = (props: IProps) => {
 }
 
 const mapStateToProps = (state: RootState) => ({
+    homepage: state.homepageState,
     sliderProps: state.homepageState.mainSlider,
+    academicProps: state.homepageState.academicPrograms,
+    aboutUsProps: state.homepageState.aboutUs
 })
 const mapDispatchToProps = {
     homepageAction: homepageAction
