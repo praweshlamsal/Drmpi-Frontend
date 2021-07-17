@@ -1,13 +1,14 @@
 import { Reducer } from "react";
 import { Action } from "redux";
 import { HomePageActionTypes, IHomepageAction } from "../actions/homepage/homepageAction";
+import { ISlider } from "../components/external/Home/SlickSlider/schema";
 import { IBasicState } from "./basicReducer";
 
 export interface IHomepageState {
-    property: any;
+    mainSlider: ISlider[] | null;
 }
 const initialBasicState: IHomepageState = {
-    property: null
+    mainSlider: []
 };
 
 export interface ActionReducer<T, V extends Action = Action> {
@@ -22,8 +23,14 @@ export const HomepageReducer: ActionReducer<IHomepageState, IHomepageAction> = (
         case HomePageActionTypes.HOMEPAGE: {
             return {
                 ...state,
-                property: action.property
+                mainSlider: action.payload.MainSlider
             };
+        }
+        case HomePageActionTypes.HOMEPAGE + "_SUCCESS": {
+            return {
+                ...state,
+                mainSlider: action.payload.MainSlider
+            }
         }
         default:
             return state;
